@@ -1,0 +1,58 @@
+<section id="cover" class="cover fold">
+    <div class="container v-align">
+        <div class="row">
+            <!-- CLASS -->
+            <div class="col-12 col-lg-4">
+                <h1 class="mast-header"> {{ meta.title }} </h1>
+                <p class="fixie default-text"></p>
+            </div>
+            <div class="col-12 col-lg-8">
+                <figure>
+                    <img src="http://lorempixel.com/860/380" />
+                </figure>
+            </div>
+        </div>
+        <!-- container -->
+    </div>
+</section>
+<section id="features">
+    <div class="container">
+        <div class="row sub-headlines default-text">
+            <div class="col-4 col-lg-4">
+                <aside>
+                    {% if theme.feature_1 %}
+                    {{ theme.feature_1 }}
+                    {% else %}
+                    <h1 class="fixie">Header</h1>
+                    <p class="fixie"></p>
+                    {% endif %}
+                </aside>
+            </div>
+
+            <div class="col-4 col-lg-4">
+                <aside>
+                    {% if theme.feature_2 %}
+                    {{ theme.feature_2 }}
+                    {% else %}
+                    <h1 class="fixie">Header</h1>
+                    <p class="fixie"></p>
+                    {% endif %}
+                </aside>
+            </div>
+
+            <div class="col-4 col-lg-4">
+                <aside>
+                    {% if theme.feature_3 %}
+                    {{ theme.feature_3 }}
+                    {% else %}
+                    <h1 class="fixie">Header</h1>
+                    <p class="fixie"></p>
+                    {% endif %}
+                </aside>
+            </div>
+
+        </div>
+        <!-- ******end - row****** -->
+        <!-- container -->
+    </div>
+</section>

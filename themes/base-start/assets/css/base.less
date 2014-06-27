@@ -1,0 +1,139 @@
+//base css
+
+
+.base() {
+
+  HTML, BODY {
+    height: 80%;
+  }
+
+  HTML {
+    font-size: @body-font;
+    /** custom */
+  }
+
+  BODY {
+    .font-size(@default-font-size);
+    background-color: @background-color;
+    line-height: @line-height;
+    font-family: @theme-font, @font-family-sans-serif;
+    color: @font-color;
+    /** used to offset fixed top navs  */
+//    padding-top: @nav-height;
+
+  }
+
+  BODY > SECTION {
+    padding-top: @section-padding - 20;
+
+  }
+
+  FIGURE {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: @margins;
+    padding-bottom: @padding;
+  }
+
+  H1, H2, H3, H4, H5, H6 {
+    //color: @font-color;
+    line-height: 1.05;
+    margin-bottom: @margins;
+    padding-bottom: @padding;
+    font-family: @theme-header-font, @font-family-sans-serif;
+    text-rendering: optimizelegibility; // Fix the character spacing for headings
+  }
+
+
+  A:link, A:active, A:hover, A:focus {
+    border: none;
+    text-decoration: none;
+  }
+
+  A {
+
+    &:link{
+      color: @links;
+    }
+
+    &:visited, &:active{
+        color: @links-active;
+    }
+
+    &:hover, &:focus {
+      color: @links-hover;
+    }
+
+  }
+
+  FORM {
+    padding: @padding;
+  }
+
+  ///* Placeholders */
+  .placeholder(@black-20);
+
+  INPUT, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    .placeholder(@black-20);
+    padding: 10px;
+    border: @border;
+    /*+border-radius:0;*/
+    .border-radius(1);
+    background-color: lighten(@background-color,10%);
+    max-width: 90%;
+  }
+
+  INPUT[type='submit'], BUTTON {
+    padding: 10px;
+    .border-radius(0);
+    border: @border;
+  }
+
+
+  TEXTAREA {
+    border: @border;
+    background-color: lighten(@background-color, 10%);
+  }
+
+  /* button transitions */
+  BUTTON {
+    /* transitions */
+    .base-transition (background,0.5s,linear);
+    /* background gradient */
+    //#theme-gradient > .vertical(20%);
+    background-color: @button-background-color;
+    padding: 10px;
+    text-transform: uppercase;
+    color: @button-color;
+    &:hover {
+      background-color: darken(@button-background-color, 50%);
+      background-image: none;
+    }
+
+  }
+
+  P {
+    //color: lighten(@font-color, 15%);
+    .paragraphs();
+    font-family: @theme-font, @font-family-sans-serif;
+
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  //classes
+  .menu-list{
+    .menu_list();
+  }
+
+  #content .container {
+    min-height: 400px;
+  }
+
+
+
+}

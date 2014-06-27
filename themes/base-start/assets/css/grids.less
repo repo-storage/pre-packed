@@ -1,0 +1,74 @@
+// creates and calculate dynamic grids
+
+.grid(@segments: 4, @margin: 0, @padding: @padding) {
+
+  .segments(@val) {
+    width: (99% / @val);
+  }
+
+
+    margin: @margin;
+    display: block;
+    .segments(@segments);
+    .box-sizing(border-box);
+    padding: 0;
+    float: left;
+    list-style: none;
+
+
+    .items {
+      padding: @padding;
+      overflow: hidden;
+    }
+
+}
+
+.grid-container(@border: @border) {
+
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  > li, > div {
+    .box-sizing(border-box);
+  }
+
+}
+
+.grids(@two:2,@three:3,@four:4) {
+  /* gird classes */
+
+
+    .grids-2 {
+      text-align: center;
+      > li, > div {
+      .grid(@two);
+      }
+    }
+
+    .grids-3 {
+      text-align: center;
+      > li, > div {
+      .grid(@three);
+    }
+    }
+
+    .grids-4 {
+      text-align: center;
+      > li, > div {
+        .grid(@four)
+      }
+
+    }
+    .grids-12 {
+      text-align: center;
+      > li, > div {
+        .grid(12)
+      }
+
+    }
+
+
+}
+
+
+

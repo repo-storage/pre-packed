@@ -1,0 +1,156 @@
+// namespace
+#ui-nav {
+  /* nav menu */
+  .ul(@height:@nav-height,@subnav-height:@sub-nav-height) {
+
+    nav {
+
+      width: 100%;
+      position: relative;
+      z-index: 9999;
+
+      ul {
+        // nav-menu -----
+        .nav-menu();
+
+        //-----------------
+        //subnav
+        .subnav();
+
+        .display{
+          display: block;
+        }
+      }
+
+    }
+    //--------------------
+
+  }
+
+  .nav-menu() {
+    /* nav */
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      width: 100%;
+      .heights(@height) ;
+      min-width: 120px;
+      text-align: center;
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-right: 20px;
+
+    }
+
+    > li {
+      position: relative;
+      display: block;
+      float: left;
+      &:hover ul {
+        display: block;
+        .base-transition;
+      }
+    }
+
+  }
+
+  .subnav() {
+
+    li ul {
+      /* sub-nav */
+      position: absolute;
+      display: none;
+      left: 0;
+
+      li {
+        display: block;
+        .heights(@subnav-height);
+        min-width: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+
+    }
+
+  }
+
+.mobile(){
+     nav {
+
+       &hover ul {
+         display: block;
+       }
+
+       > ul {
+         max-width: 200px;
+         position: absolute;
+         z-index: 9999;
+         display: none;
+       }
+     }
+
+  ul {
+    z-index: 9999;
+  }
+}
+
+  .heights(@height) {
+    height: @height;
+    line-height: @height;
+  }
+
+  .colors() {
+    li {
+      #ui-colors > .link();
+    }
+
+  }
+
+  .background-colors(@background-color:@nav-background-color,@hover-color: @nav-hover-background-color) {
+    li {
+      #ui-colors > .backgrounds(@background-color);
+      &:hover {
+        #ui-colors > .backgrounds(@hover-color);
+      }
+    }
+  }
+
+}
+
+//-----------------starter menu horizontal--------------------
+//
+//<div class="container test">
+//    <nav class="">
+//        <ul>
+//            <li>Menu ----</li>
+//            <li>Menu ----</li>
+//            <li>Menu ----</li>
+//            <li>sub Menu ----
+//<ul>
+//                    <li>SUB------</li>
+//                    <li>SUB------</li>
+//                    <li>SUB------</li>
+//                    <li>SUB------</li>
+//                    <li>SUB------</li>
+//                </ul>
+//            </li>
+//        </ul>
+//    </nav>
+//</div>
+
+//---------------starter less -------------------------
+
+
+//.test {
+//  padding: 0;
+//  #ui-nav > .ul;
+//  #ui-colors > .backgrounds(#a3a3a3);
+//  #ui-nav > .background-colors(#bebebe);
+//  li:hover {
+//    color: #fff;
+//  }
+//
+//}

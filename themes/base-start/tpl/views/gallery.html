@@ -1,0 +1,7 @@
+{% for image in gallery %}
+<figure>
+    <a href="{{ image.url }}" >
+    <img src="{{ image.thumb_url }}" />
+    </a>
+</figure>
+{% endfor %}

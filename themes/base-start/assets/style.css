@@ -1,0 +1,19 @@
+/* add customize theme */
+/*!
+ * Preboot v2
+ *
+ * Open sourced under MIT license by @mdo.
+ * Some variables and mixins from Bootstrap (Apache 2 license).
+ */
+/**
+   * LESS custom theme mixins V1.0
+   *
+   */
+/*
+ V-Center mixin - v-center()
+ Responsive vertically align elements
+ .block {
+  .v-center();
+ }
+
+ */

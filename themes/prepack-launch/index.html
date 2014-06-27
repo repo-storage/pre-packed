@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ config.site_title }} -- {{ meta.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ theme_url }}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Bootstrap -->
+        {{ bootstrap_css_min }}
+        <link rel="stylesheet" href="{{ theme_url }}/stylesheet.css" type="text/css" />
+        <link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
+        <link rel="stylesheet" href="{{ theme_url }}/fonts/open-sans/stylesheet.css" type="text/css" />
+        <link rel="stylesheet" href="{{ theme_url }}/fonts/robotoslab_regular/stylesheet.css" type="text/css" />
+        <!--<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>-->
+
+    </head>
+    <body>
+        <header>
+            <section id="cover" class="cover fold v-align">
+                <div class="">
+                    <div class="">
+                        <!-- CLASS -->
+                        <div class="">
+                            <!--            <h1 class="mast-header primary-color-5"><span class="glyphicon glyphicon-tower"></span></h1>-->
+                            <h1 class="mast-header"> <img src="{{ theme_url }}/prepacked-logos-org.png" alt="Logo"></h1>
+                            <h1 class="mast-header primary-color-3">PRE.PACKED</h1>
+                        </div>
+                    </div>
+                    <!-- container -->
+                </div>
+            </section>
+            <section id="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-12">
+
+                            <aside>
+
+                                <h1 class="headlines">
+                                    A PrePacked fork of Pico -- a stupidly simple and blazing fast flat flie CMS, that just got a lot easier...
+                                </h1>
+                                <p class="regular-text">Pico is simple and easy to use flat file content management system written by <a href="http://gilbert.pellegrom.me/" target="_blank">Gilbert Pellegrom</a> the founder of <a href="http://dev7studios.com/" target="_blank">Dev Studios</a> the guys that created the famous Nivo Slider. PrePacked is a fork of Pico that we modified and packed with some of our favorite plugins then added some of our own to make it simple and easy for us to build and deploy Pcio based websites. This is a preview release read about the <a href="#info">Features here</a>, or fork it <a href="https://github.com/shawnsandy/pico/tree/pre-packed" target="_blank">here on Github</a>.</p>
+                            </aside>
+                        </div>
+                    </div>
+                    <!-- ******end - row****** -->
+                    <!-- container -->
+                </div>
+            </section>
+        </header>
+        <section id="git-download">
+            <div class="container">
+                <div class="row git-download">
+                    <div class="col-md-12">
+                        <button class="btn btn-lg sub-headlines"><span class="glyphicon glyphicon-ok-sign"></span> <a href="https://github.com/shawnsandy/pico" target="_blank">Follow or Fork us on Github</a></button>
+                        <p class=""><strong>Preview</strong> release you can follow or contribute on Github</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-2">
+
+
+                        <article>
+                            <h1 class="titles"><span class="glyphicon glyphicon-ok-circle"></span> PICO Extended (V0.7)</h1>
+                            <p>We take the latest version of Pico V0.7, modify / extend the pico library so that we can customize any way we choose with little or no fear of breaking our apps on future releases, this gives us the flexibility to modify and customize pico functions that we choose.<span class="readmore"></p>
+                        </article>
+                        <article>
+                            <h1 class="titles"><span class="glyphicon glyphicon-ok-circle"></span> Prepacked Pico Plugins</h1>
+                            <p>We took some of our favorites Pico Plugins and added them as git modules to our fork, this saves us the trouble of having to go searching and downloading plugins that we use on a regular basic all the time. If you have a plugin that you would like to see added to this fork, post it in the official pico plugin wiki and we will find it.</p>
+                        </article>
+                        <article>
+                            <h1 class="titles"><span class="glyphicon glyphicon-ok-circle"></span> Custom Meta Values</h1>
+                            <p>Create and use custom meta values in Pico using the latest version of Advanced Meta, a plugin created to make it easier to create and access custom meta page values in Pico V0.7.</p>
+                        </article>
+                        <article>
+                            <h1 class="titles"><span class="glyphicon glyphicon-ok-circle"></span> Page Layout(s)</h1>
+                            <p>Custom pages lets you specify and use custom HTML templates for pages, but we did not stop there we created themes that leverage Twig's template inheritance feature by using blocks to change only the parts of the base templates you need. You can read more about <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance" target="_blank">template inheritance </a>here in the Twig docs.</p>
+                        </article>
+                        <article>
+                            <h1 class="titles"><span class="glyphicon glyphicon-ok-circle"></span> Dynamic Page Galleries</h1>
+                            <p>Quickly create galleries for your page by adding a gallery folder to your content dir and placing folder(s) inside it named after the page slug or file_name of the page you want the gallery to appear, place all of your images inside of that folder then add another folder named thumbs to it. Dynamic Galleries will locate the folder, create the thumbnails inside and add them to the your theme variables for you to access.</p>
+                        </article>
+                        <article>
+                            <h1 class="titles"><span class="glyphicon glyphicon-ok-circle"></span> Starter Theme</h1>
+                             <p>No fork would ever be complete without something to get you up and running quickly, so if you would like to test out some of the features we added go to your Pico config file and change your theme config value to theme-starter, now go to you pico site and check it out.</p>
+                        </article>
+                        <article>
+                            <h1 class="titles"><span class="glyphicon glyphicon-ok-circle"></span> Built With Bootstrap </h1>
+                            <p>We are huge fans of Bootstrap the "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development" so we simply could leave it out.</p>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section id="content">
+            <!--TODO edit index.md page-->
+            <div class="container">
+                {% include tpl.content ignore missing %}
+            </div>
+        </section>
+
+
+
+        <footer class="primary-color-5">
+            {% include tpl.footer ignore missing %}
+
+            <p>
+                <img src="{{ theme_url }}/images/mp-logo-sm.png" alt="logo">
+            </p>
+
+
+            {{ theme.organization }} {{ theme.copyright }}
+
+            <!-- ******end - row****** -->
+
+        </footer>
+        <!-- JavaScript plugins (requires jQuery) -->
+        <script src="{{ theme_url }}/js/jquery-1.10.2.min.js"></script>
+        <!-- Modernizer -->
+        <script src="{{ theme_url }}/js/modernizr.custom.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        {{ bootstrap_js_min }}
+        <!-- Optionally enable responsive features in IE8 -->
+        <script src="{{ theme_url }}/js/respond/respond.min.js"></script>
+        <script src="{{ theme_url }}/js/fixie_min.js" ></script>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block post %}
+<div class="col-md-8">
+    {{ content }}
+    <div class="post">
+    {% include views.pages_archive %}
+    </div>
+
+</div>
+{% endblock %}

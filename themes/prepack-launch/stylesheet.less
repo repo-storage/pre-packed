@@ -1,0 +1,73 @@
+/*
+ Theme Name: Theme Name
+ Theme URI: http://example.com/
+ Description: Description
+ Version: 1.0
+ Author: Shawn Sandy
+ Author URI: http://example.com/
+ Tags: one, two
+ */
+
+//import all externall mixins here
+@import "theme-starter-master/css/globals";
+@import "theme-starter-master/assets/preboot/less/preboot";
+@import "theme-starter-master/assets/less/mixins/mixins";
+@import "theme-starter-master/assets/less/mixins/nav-menu";
+@import "theme-starter-master/assets/less/mixins/font-ratios";
+@import "theme-starter-master/assets/less/mixins/colors";
+@import "theme-starter-master/css/base";
+@import "theme-starter-master/css/theme";
+@import "theme-starter-master/css/cover";
+@import "theme-starter-master/css/content";
+@import "theme-starter-master/css/responsive";
+@import "theme-starter-master/css/grids";
+@import "theme-starter-master/css/patterns";
+
+
+
+/** --------------------------------------- */
+
+.base();
+
+#top-nav {
+  /**
+ * Nav menu for bootstrap 3.0 navs
+ */
+  .drop-nav();
+
+}
+
+/*#COVER*/
+.cover();
+
+/*#CONTENT*/
+.content();
+
+//classes
+.theme();
+
+/**
+MOBILE
+**/
+.responsive();
+
+
+/** colors */
+.colors();
+
+/*----prototyping----*/
+.section-seperator {
+  color: @border-color;
+  padding: 20px;
+  border: 1px dashed @border-color;
+  text-align: center;
+  margin: 20px 20px 80px;
+  text-transform: uppercase;
+  min-height: @nav-height;
+}
+
+.view-source {
+  padding: 20px;
+  display: block;
+}
+

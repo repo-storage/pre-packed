@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>{{ config.site_title }} -- {{ meta.title }}</title>
+        <link href="{{ theme_url }}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        {% block styles %}
+        {{ bootstrap_css_min }}
+        {{ theme_stylesheet }}
+        <link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
+        <link rel="stylesheet" href="{{ theme_url }}/fonts/open-sans/stylesheet.css" type="text/css" />
+        {% endblock styles %}
+        {% endblock head %}
+    </head>
+    <body>
+        {% block nav %}
+        <nav id="top-nav" class="nav" data-trigger="#cover">
+            <div class="container">
+                <ul class="nav navbar-nav pull-right">
+                    {% for page in pages if page.date is empty %}
+                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                    <li>
+                        {% if preview_theme %}<a href="{{ base_url }}/?theme=close">{{ preview_theme }} [x]</a>{% endif %}
+                    </li>
+                </ul>
+                <a href="{{ base_url }}" class="navbar-brand sub-headlines">{{ config.site_title }}</a>
+                <!-- container -->
+            </div>
+
+        </nav>
+        {% endblock nav %}
+        <header>
+            {% block header %}
+            {% block cover %}
+            <div id="cover"></div>
+            {% endblock cover %}
+            {% endblock header %}
+        </header>
+        <section id="content">
+            {% block content %}
+            <div class="container">
+                <!-- CLASS -->
+                <div class="row">
+                    {% block post %}
+                    <div class="col-md-8 post">
+                        <article>
+                        {{ content }}
+                        </article>
+                    </div>
+                    {% endblock post %}
+                    <!-- CLASS -->
+{% block sidebar %}
+                    <div id="sidebar" class="col-md-4 menu-list">
+                        {% include views.recently %}
+                        <!--{% include views.gallery %}-->
+                    </div>
+{% endblock sidebar %}
+                </div>
+                <!-- ******end - row****** -->
+            </div>
+            {% endblock content %}
+        </section>
+        <footer class="primary-color-4">
+            {% block footer %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 headlines">
+                        <aside class="bio">
+                            <figure class="pull-left">
+                                <img src="http://lorempixel.com/90/90/people" alt="">
+                            </figure>
+                            <h1>Lorem ipsum dolor.</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sunt, facere, eius nemo sed quas atque asperiores qui nulla animi mollitia inventore rem consectetur temporibus quisquam? Consequuntur, porro, ipsam quasi obcaecati enim ipsum consectetur. Nobis, non, natus, aliquid, eos numquam asperiores culpa molestiae mollitia quod odit voluptates consectetur veritatis saepe fugit illum adipisci exercitationem cumque tempore animi optio nihil dolorem perspiciatis impedit repellendus veniam deserunt quam sunt labore est? Optio, vitae pariatur minus natus quia facere consectetur facilis error adipisci.</p>
+                        </aside>
+                    </div>
+                    <div class="col-md-4">
+                        {% block address %}
+
+                        <address class="default-text">
+                            <span class="sub-headlines"><span class="address-icon glyphicon glyphicon-map-marker"></span> {{ config.organization }}</span>
+                            <span>{{ config.contact_address }}</span>
+                            <span>{{ config.contact_name }}</span>
+                            <span><abbr title="Phone">P: </abbr> {{ config.contact_number }}</span>
+                            {% endblock address %}
+                        </address>
+                    </div>
+
+
+
+                </div>
+            </div>
+            {{ config.organization }} : {{ config.copyright }}
+            <!-- ******end - row****** -->
+            {% endblock footer %}
+        </footer>
+        {% block scripts %}
+        <!-- JavaScript plugins (requires jQuery) -->
+        <script src="{{ theme_url }}/js/jquery-1.10.2.min.js"></script>
+        <!-- Modernizer -->
+        <script src="{{ theme_url }}/js/modernizr.custom.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        {{ bootstrap_js_min }}
+        <!-- Optionally enable responsive features in IE8 -->
+        <script src="{{ theme_url }}/js/respond/respond.min.js"></script>
+        <script src="{{ theme_url }}/js/fixie_min.js" ></script>
+        <script src="{{ theme_url }}/assets/js/jquery.transit.min.js" ></script>
+        <script src="{{ theme_url }}/assets/js/waypoints.min.js" ></script>
+        <script src="{{ theme_url }}/assets/js/theme.js" ></script>
+        {% endblock scripts %}
+    </body>
+</html>

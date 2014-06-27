@@ -1,0 +1,96 @@
+/*
+ Theme Name: Theme Name
+ Theme URI: http://example.com/
+ Description: Description
+ Version: 1.0
+ Author: Shawn Sandy
+ Author URI: http://example.com/
+ Tags: one, two
+ */
+
+//import all externall mixins here
+@import "css/globals";
+@import "assets/preboot/less/preboot";
+@import "assets/less/mixins/mixins";
+@import "assets/less/mixins/nav-menu";
+@import "assets/less/mixins/font-ratios";
+@import "assets/less/mixins/colors";
+@import "css/base";
+@import "css/theme";
+@import "css/cover";
+@import "css/content";
+@import "css/responsive";
+@import "css/grids";
+@import "css/patterns";
+@import "css/comments";
+@import "fonts/font-awesome/less/font-awesome";
+@import "css/ui/ui-colors";
+@import "css/ui/ui-nav";
+
+
+
+/** --------------------------------------- */
+
+.base();
+
+.top-nav-padding {
+  padding-top: @nav-height;
+}
+
+#top-nav {
+  /**
+ * Nav menu for bootstrap 3.0 navs
+ */
+  .drop-nav();
+}
+
+/*#COVER*/
+.cover();
+
+/*#CONTENT*/
+.content();
+
+//comments
+.comments();
+
+//classes
+.theme();
+
+/**
+MOBILE
+**/
+.responsive();
+
+
+/** colors */
+.colors();
+
+
+//
+//@import "css/stylesheet.css";
+
+/*----prototyping----*/
+.section-seperator {
+  color: @border-color;
+  padding: 20px;
+  border: 1px dashed @border-color;
+  text-align: center;
+  margin: 20px 20px 80px;
+  text-transform: uppercase;
+  min-height: @nav-height;
+  
+}
+
+.test {
+  padding: 0;
+  #ui-nav > .ul;
+  #ui-colors > .backgrounds(#a3a3a3);
+  #ui-nav > .background-colors(#bebebe);
+  li:hover {
+    color: #fff;
+  }
+
+  #ui-nav > .mobile ();
+
+}
+

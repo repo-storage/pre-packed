@@ -1,0 +1,36 @@
+
+//.text-color {
+//  #ui-colors > .backgrounds(@background-color,@background-color-2);
+//}
+ #ui-colors {
+
+
+
+   .link(@color:@font-color,@link:@font-color,@hover:@font-color,@active: @font-color,@visited:@font-color){
+
+     color: @color;
+     &:active{
+       color:@active;
+     }
+     &:visited{
+       color:@visited;
+     }
+
+     &:hover, &:focus{
+       color: @hover;
+     }
+ }
+
+   .backgrounds(@background:@background-color,@hover:''){
+
+     background-color: @background;
+     .hover(@hover);
+     .hover(@hover) when (iscolor(@hover)){
+       &:hover {
+         background-color: @hover;
+       }
+     }
+   }
+}
+
+

@@ -1,0 +1,38 @@
+/// patterns /////
+
+
+
+.boxes(@box-padding:20px,@font-padding: 0px, @color: @cp-4) {
+
+
+  aside{
+    padding: @box-padding;
+    //padding-top: @padding;
+  }
+
+  figure {
+    padding-left: @box-padding;
+    padding-right: @box-padding;
+    //padding-bottom: @padding;
+    margin-bottom: @margins;
+  }
+
+  p, h1 {
+
+    padding: @font-padding;
+    padding-top: 0;
+    padding-bottom: @font-padding;
+    color: @color;
+  }
+
+}
+
+
+.bio(@padding:@padding, @float:left) {
+
+  figure {
+    margin: @padding;
+    float: @float;
+  }
+
+}

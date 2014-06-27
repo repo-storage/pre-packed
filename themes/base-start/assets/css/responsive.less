@@ -1,0 +1,48 @@
+.responsive(){
+
+
+  /* Large desktop 1600 */
+  @media (min-width: 1600px) {
+
+
+    .container {
+      max-width: 1282px;
+    }
+    .golden-1600();
+
+  }
+
+  /* Large desktop 1200 */
+  @media (min-width: 1200px) {
+
+    .golden-1270();
+
+  }
+
+  /* Portrait tablet to landscape and desktop */
+  @media (min-width: 768px) and (max-width: 979px) {
+
+    .golden-970();
+    .grids(1,2,2);
+
+  }
+
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 767px) {
+
+    .golden-720();
+    .grids(1,2,2);
+
+  }
+
+  /* Landscape phones and down */
+  @media (max-width: 480px) {
+
+    .golden-480();
+    .grids(1,1,1);
+
+  }
+
+
+}
+

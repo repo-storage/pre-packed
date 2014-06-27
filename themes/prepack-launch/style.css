@@ -1,0 +1,120 @@
+/*Theme custom elements styles here*/
+
+
+
+FIGURE.pull-left, FIGURE.pull-right {
+	margin: 10px;
+}
+ 
+#info .glyphicon {
+	/*color: #f6a83e;*/
+}
+
+#info article {
+	margin-bottom: 40px;
+	border-bottom: dotted #2e7525 1px;
+	padding-bottom: 40px;
+}
+
+#info {
+	padding-bottom: 40px;
+	/*padding-bottom: 120px;*/
+}
+
+#info a{
+	color: #004F9D;
+	border-bottom: #004F9D dotted 1px;
+	padding-bottom: 3px;
+}
+
+
+#info a:hover{
+	color: #2E725F;
+	border-bottom: #2E725F dotted 1px;
+	padding-bottom: 3px;
+}
+
+
+
+	#info .titles, #info .titles H1 {
+		color: #2e725f;
+	}
+
+#content {
+	/*background-color: #be6b1d;
+	color: #FCE0BA;;*/
+	padding-bottom: 40px;
+    padding-top: 20px;
+
+}
+
+#git-download {
+	border-bottom: dotted 1px #376;
+}
+
+.git-download {
+	text-align: center;
+	padding-bottom: 80px;
+	padding-top: 80px;
+	color: #376;
+}
+
+.git-download .btn {
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: #376;
+	padding-right: 40px;
+	padding-left: 40px;
+	text-transform: none;
+}
+
+.git-download a {
+	color: #fff;
+}
+
+.git-download button:hover {
+	color: #fff;
+	/*background-color: rgb(47,114,98, 0.2);*/
+	background-color: #254;
+
+}
+
+.post .readmore a, .readmore a {
+color: #254;
+font-weight: bold;
+border: none;
+/*border-bottom: 1px dotted #254;*/
+
+}
+
+#blog {
+	padding-top: 20px;
+}
+
+address span {
+ display: block;
+}
+
+#features a {
+	color: #fff;
+	border-bottom: #f1f1f1 1px dotted;
+	padding-bottom: 3px;
+}
+
+#features a:hover{
+	/*border-bottom: none;*/
+	border-color: #FFB23C;
+	color: #FFB23C;
+}
+
+#features .regular-text {
+	line-height: 1.8;
+	font-size: 1.8rem;
+	font-size: 18px;
+}
+
+
+#features h1{
+	color: #FFF;
+	
+}

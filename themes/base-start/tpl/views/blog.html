@@ -1,0 +1,12 @@
+{% for page in pages if not page.template  %}
+
+{% if page.date %}
+<!-- Note we check for Date field (posts) here -->
+<article>
+<h1 class=""><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <p class="">{{ page.excerpt }}</p>
+    <p>Status: {{ page.type }} {{ page.slug }}</p>
+</article>
+
+{% endif %}
+{% endfor %}

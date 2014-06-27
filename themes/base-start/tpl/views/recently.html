@@ -1,0 +1,16 @@
+{% for page in pages  %}
+{% if page.date %}
+<!-- Note we check for Date field (posts) here -->
+<aside>
+<h1 class=""><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <p class="">{{ page.excerpt }}</p>
+    <p>Status: {{ page.type }} {{ page.slug }}</p>
+</aside>
+{% else %}
+<aside>
+<h1>Sidebar</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, pariatur, iure, fugiat, rerum laboriosam eius necessitatibus eveniet veritatis iusto voluptatum minima beatae sapiente dolore eos expedita voluptatibus libero inventore odio. Culpa, sed, facere, sapiente, similique necessitatibus itaque quae harum officia eum rerum mollitia magni pariatur accusamus consequatur quaerat quos explicabo. Architecto, quod perspiciatis nulla ad?</p>
+</aside>
+
+{% endif %}
+{% endfor %}
